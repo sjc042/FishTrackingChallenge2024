@@ -6,14 +6,10 @@ import datetime
 
 def make_parser():
     parser = argparse.ArgumentParser("Interpolation!")
-    # parser.add_argument("--root_path", default="/home/hsiangwei/Desktop/sportsmot")
     parser.add_argument("--fpath", default="", help="tracking results file path")
-    # parser.add_argument("--txt_name", default="", help="file name of tracking result path in MOTChallenge format")
-    # parser.add_argument("--save_path", default="interpolated.txt", help="save result path, none for override")
     parser.add_argument("--n_min", type=int, default=5, help="minimum")
     parser.add_argument("--n_dti", type=int, default=20, help="dti")
     parser.add_argument("--distance_thres", type=int, default=500, help="distance threshold for interpolation")
-    # parser.add_argument("--limit_ten", type=bool, default=False, help="True: interpolate up to ten tracks, vice versa")
     return parser
 
 def bbox_distance(right_box, left_box):

@@ -179,8 +179,6 @@ if __name__ == '__main__':
     merged_tracks, _ = merge_tracks(distances, track_objects)
     # Filter low variance tracks
     filtered_tracks = filter_tracks(merged_tracks)
-    # TODO: interpolate tracks
-
     # Output the results
     input_fname = os.path.basename(args.fpath)
     output_fpath = os.path.join(make_time_dir(parent_dir), f'merged_{input_fname}')
